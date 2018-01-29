@@ -30,6 +30,7 @@
 "/audit/api-reference": "/api/audit"
 "/concepts": "/concepts/overview"
 "/concepts/guides/applications": "/application/overview"
+"/api/reporting": "/api/reports"
 "/contribute/guides/styleguide": "/contribute/guides/markdown-guide"
 "/contribute/guides/write-the-docs": "/contribute/guides/writing-style-guide"
 "/dispatch/api-reference": "/api/dispatch"
@@ -134,6 +135,7 @@
 "/voice/guides/outbound-calls": "/voice/voice-api/guides/outbound-calls"
 "/voice/guides/record-calls-and-conversations": "/voice/voice-api/guides/record-calls-and-conversations"
 "/voice/guides/call-a-websocket": "/voice/voice-api/guides/call-a-websocket"
+<<<<<<< HEAD
 "/voice/guides/ncco-reference": "/voice/voice-api/ncco-reference"
 "/voice/voice-api/websockets": "/voice/voice-api/guides/websockets"
 "/voice/voice-api/api-reference": "/api/voice"
