@@ -117,21 +117,22 @@ Nexmo Client SDK is currently supported in Javascript, iOS and Android.
 
 To get started you can choose between 2 options:
 
-- *Option 1:* Clone one of the sample apps:
-    - Javascript
-    - iOS: Swift or Objective-C
-    - Android: Kotlin or Java
-//TODO: add links
+- *Option 1:* 
+    - Clone one of the sample apps:
+        - Javascript //TODO: add links
+        - iOS: [Swift](https://github.com/nexmo-community/contact-center-swift) or [Objective-C](https://github.com/nexmo-community/contact-center-objective-c)
+        - Android: Kotlin or Java //TODO: add links
+    - Make sure you add your server URL and the mobile key as required
 
 - *Option 2:* Integrate the SDK to your own client side application:
     1. [Add the SDK to your existing app](_documentation/client-sdk/setup/add-sdk-to-your-app)
     2. [Add in-app voice functionality](_documentation/client-sdk/in-app-voice/guides/start-and-receive-calls)
+    3. Create a simple API client to consume the JWT endpoint shown above.
 
 
 At this point you have a client side application and a backend application to support it.
 
 You can run the client app on two different devices, and log in as the user `Jane` on one device and the user `Joe` on the other.
-
 
 You are now ready to make and receive calls, and add other advanced voice functionality with Nexmo Voice API.
 
@@ -140,29 +141,90 @@ You are now ready to make and receive calls, and add other advanced voice functi
 For each Nexmo Application you can define an `answer_url`. That is a [webhook](_documentation/concepts/guides/webhooks) which Nexmo make a request to as soon as your Nexmo number is being called to.
 The `answer_url` contains the actions that will execute throughout the call. It does that by defining those actions in a JSON it returns, which follows the [Nexmo Call Control Object (NCCO)](_documentation/voice/voice-api/ncco-reference).
 
-Updating the NCCO that returns from your `answer_url` changes the call functionality and allows you to add rich capabilities to your contact center application.
+Updating the NCCO that returns from your `answer_url` changes the call functionality and allows you to add rich capabilities to your contact center application. To do this, navigate to the "App Settings" tab and click on "Edit NCCO":
 
-### Recieve calls
+[screeshot to be added]
+
+### Receive calls
 
 For the basic use case, when a caller calls the contact center application, create a conversation and direct it to the agent Jane. 
 
-use this ncco...
+The following NCCO, connects the called to user Jane:
 
-try it out.
+```json
+[
+    {
+        "action": "talk",
+        "text": "Thank you for calling Jane"
+    },
+    {
+        "action": "connect",
+        "endpoint": [
+            {
+                "type": "app",
+                "user": "jane"
+            }
+        ]
+    }
+]
+```
+
+To try it out, call the number assigned to your app.
 
 ### Make calls
 
-this is how to allow the Jane to call from the app to a phone number.
+This is how to allow the Jane to call from the app to a phone number (please make sure you are using your Nexmo number as required):
 
+```json
+[
+    {
+        "action": "talk",
+        "text": "Please wait while we connect you."
+    },
+    {
+        "action": "connect",
+        "timeout": 20,
+        "from": "YOUR_NEXMO_NUMBER",
+        "endpoint": [
+            {
+                "type": "phone",
+                "number": "CALLEE_PHONE_NUMBER"
+            }
+        ]
+    }
+]
+```
 
-try it out.
+To try it out, tap the "Call" button in the client app. 
 
 ### Create an IVR
 
-when the caller calls the contact center, they hear "thank you for calling my contact center. to talk to Jane press 1, to talk to ?Joe press 2."
+When the caller calls the contact center, they hear "Thank you for calling my contact center. To talk to Jane please press 1, or to talk to Joe press 2."
 
+```json
+[
+    {
+        "action": "talk",
+        "text": "Thank you for calling my contact center.",
+        "voiceName": "Amy",
+        "bargeIn": false
+    },
+    {
+        "action": "talk",
+        "text": "To talk to Jane, please press 1, or, to talk to Joe, press 2.",
+        "voiceName": "Amy",
+        "bargeIn": true
+    },
+    {
+        "action": "input",
+        "eventUrl": ["YOUR_SERVER_URL/webhooks/dtmf"]
+    }
+]
+```
 
-try it out.
+The input is processed by a specialised webhook - please make sure you are using your server URL above.
+
+Try it out by calling the number associated with the app.
 
 ### Call Queue
 User call an agent → stream music → connect to agent (according to backend trigger)
