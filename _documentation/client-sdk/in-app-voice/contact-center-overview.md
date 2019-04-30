@@ -38,8 +38,11 @@ Choose between 2 options:
 
 - *Option 1:* Deploy one of our sample backend application, in your prefered language. They are all on available on GitHub so you can explore the code and deploy it yourself.
 
-  - Rails: <a href="https://heroku.com/deploy?template=https://github.com/nexmo-community/client-sdk-server-rails" target="_blank">
-  <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy">
+<a href="https://heroku.com/deploy?template=https://github.com/nexmo-community/client-sdk-server-rails" target="_blank">
+    <img src="https://i.imgur.com/yaVAvl9.png">
+</a>
+<a href="https://heroku.com/deploy?template=https://github.com/nexmo-community/client-sdk-server-express" target="_blank">
+    <img src="https://i.imgur.com/LayAvQP.png">
 </a>
 
 - *Option 2:* Integrate to your own backend application. Follow along and use the API directly to gain the same functionality.
