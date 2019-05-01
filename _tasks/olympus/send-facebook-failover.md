@@ -1,11 +1,11 @@
 ---
-title: Send a Messenger message with failover
-description: Send a Messenger message with failover using the Dispatch API.
+title: Send a Facebook message with failover
+description: Send a Facebook message with failover using the Dispatch API.
 ---
 
-# Send a Messenger message with failover
+# Send a Facebook message with failover
 
-Sending a Messenger message with failover to another channel is achieved by making a single request to the Dispatch API endpoint.
+Sending a Facebook message with failover to another channel is achieved by making a single request to the Dispatch API endpoint.
 
 In this example you will implement the following workflow:
 
