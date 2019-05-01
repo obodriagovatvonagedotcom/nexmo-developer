@@ -7,14 +7,12 @@ introduction:
   description: This task shows you how to use the failover functionality of the Dispatch API.
   content: |
     Dispatch API features automatic failover. In this task you see how to send a Facebook Messenger message with automatic failover to SMS.
+    
 
-  ```partial
-  source: _partials/reusable/prereqs.md
-  ```
-
-  > **NOTE:** This task assumes you have already created a Facebook Profile and a Facebook Page.
+    > **NOTE:** This task assumes you have already created a Facebook Profile and a Facebook Page.
 
 tasks:
+- olympus/prereqs
 - olympus/create-application
 - olympus/generate-jwt-facebook
 - olympus/link-facebook-page
