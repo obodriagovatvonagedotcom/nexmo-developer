@@ -38,7 +38,7 @@ Choose between 2 options:
 
 - *Option 1:* Deploy one of our sample backend application, in your prefered language. They are all on available on GitHub so you can explore the code and deploy it yourself.
 
-<a href="https://heroku.com/deploy?template=https://github.com/nexmo-community/client-sdk-server-rails" target="_blank">
+<a href="https://heroku.com/deploy?template=https://github.com/nexmo-community/contact-center-rails" target="_blank">
     <img src="https://i.imgur.com/yaVAvl9.png">
 </a>
 <a href="https://heroku.com/deploy?template=https://github.com/nexmo-community/client-sdk-server-express" target="_blank">
@@ -54,7 +54,7 @@ Once you have created a Nexmo Account you will be able to create multiple [Nexmo
 - If you deployed one of our demo backend applications on the previous step, you will need to:
   -  login in using your *api key* and *api secret*
     ![Login](/assets/images/client-sdk/contact-center/login.png)
-  - and then you can create a new application by entering a name and clicking *Create* [to update screenshot].
+  - and then you can create a new application by entering a name and clicking *Create*:
     ![Setup](/assets/images/client-sdk/contact-center/setup.png)
 
 - Otherwise, you can also use the [API directly](_documentation/concepts/guides/applications/curl#getting-started-with-applications)
