@@ -14,7 +14,6 @@ introduction:
 tasks:
 - olympus/prereqs
 - olympus/create-application
-- olympus/generate-jwt-facebook
 - olympus/link-facebook-page
 - olympus/link-application-to-facebook
 - olympus/send-facebook-failover
