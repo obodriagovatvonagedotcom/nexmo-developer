@@ -143,7 +143,7 @@ module ApplicationHelper
 
       ss = []
       ss << "<li class='navigation-item--#{folder[:title]} navigation-item'>"
-      ss << "<a class='Vlt-sidemenu__trigger'>"
+      ss << "<span class='Vlt-sidemenu__trigger'>"
 
       # If we have an icon
       if options['svg'] && options['svgColor']
@@ -156,11 +156,14 @@ module ApplicationHelper
       # And a label if there's one provided for this entry
       if options['label']
         additional_classes = generate_label_classes(options['label'])
-        ss << content_tag(:span, options['label'], class: 'Vlt-badge Vlt-badge--margin-left' + additional_classes).html_safe
+
+        state = options['label'].downcase.tr(' ', '-')
+        label = link_to(options['label'], "/product-lifecycle/#{state}", class: 'Vlt-badge Vlt-badge--margin-left' + additional_classes)
+        ss << label
       end
       ss << '</span>'
 
-      ss << '</a>'
+      ss << '</span>'
 
       # Are there any subitems that need adding here?
       ss << output_children(folder[:children]) if folder[:children].length
@@ -252,7 +255,8 @@ module ApplicationHelper
 
   def generate_label_classes(label)
     classes = ' '
-    classes += 'Vlt-bg-green' if label.casecmp('beta').zero?
+    classes += 'Vlt-bg-green-lighter Vlt-green' if label.casecmp('beta').zero?
+    classes += 'Vlt-bg-blue-lighter Vlt-blue' if label.casecmp('dev preview').zero?
 
     classes
   end
