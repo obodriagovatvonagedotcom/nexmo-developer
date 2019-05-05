@@ -38,17 +38,24 @@ Choose between 2 options:
 
 - *Option 1:* Deploy one of our sample backend application, in your prefered language. They are all on available on GitHub so you can explore the code and deploy it yourself.
 
-    * *Rails* :  
+    * *Rails* : [(GitHub)](https://github.com/nexmo-community/contact-center-rails)
+
 <a href="https://heroku.com/deploy?template=https://github.com/nexmo-community/contact-center-rails" target="_blank">
     <img src="https://i.imgur.com/yaVAvl9.png">
-</a> | [GitHub](https://github.com/nexmo-community/contact-center-rails)
+</a> 
 
-    * Javascript : <a href="https://heroku.com/deploy?template=https://github.com/nexmo-community/client-sdk-server-express" target="_blank">
+
+    * Javascript : [(GitHub)](https://github.com/nexmo-community/client-sdk-server-express)
+    
+    <a href="https://heroku.com/deploy?template=https://github.com/nexmo-community/client-sdk-server-express" target="_blank">
     <img src="https://i.imgur.com/LayAvQP.png">
-</a> | [GitHub](https://github.com/nexmo-community/client-sdk-server-express)
+</a> 
 
-    * Java :
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/nexmo/client-sdk-server-kotlin) | [GitHub](https://github.com/nexmo/client-sdk-server-kotlin)
+
+    * Kotlin : [(GitHub)](https://github.com/nexmo/client-sdk-server-kotlin)
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/nexmo/client-sdk-server-kotlin)
+
 
 
 - *Option 2:* Integrate to your own backend application. Follow along and use the API directly to gain the same functionality.
