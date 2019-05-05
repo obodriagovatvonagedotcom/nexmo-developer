@@ -38,14 +38,21 @@ Choose between 2 options:
 
 - *Option 1:* Deploy one of our sample backend application, in your prefered language. They are all on available on GitHub so you can explore the code and deploy it yourself.
 
+    * *Rails* :  
 <a href="https://heroku.com/deploy?template=https://github.com/nexmo-community/contact-center-rails" target="_blank">
     <img src="https://i.imgur.com/yaVAvl9.png">
-</a>
-<a href="https://heroku.com/deploy?template=https://github.com/nexmo-community/client-sdk-server-express" target="_blank">
+</a> | [GitHub](https://github.com/nexmo-community/contact-center-rails)
+
+    * Javascript : <a href="https://heroku.com/deploy?template=https://github.com/nexmo-community/client-sdk-server-express" target="_blank">
     <img src="https://i.imgur.com/LayAvQP.png">
-</a>
+</a> | [GitHub](https://github.com/nexmo-community/client-sdk-server-express)
+
+    * Java :
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/nexmo/client-sdk-server-kotlin) | [GitHub](https://github.com/nexmo/client-sdk-server-kotlin)
+
 
 - *Option 2:* Integrate to your own backend application. Follow along and use the API directly to gain the same functionality.
+
 
 ### 2. Create Nexmo Application
 
@@ -65,29 +72,31 @@ In order to make and receive calls, you should have a [Nexmo Number](_documentat
 
 To set that up, you can either assign a number you already own or buy a new number.
 
-#### 3.1. Assign a Nexmo Number
+The demo backend application will give you a basic features to start with. For more details and number management check out the [Numbers API](_documentation/numbers/overview) or visit the [dashboard](https://dashboard.nexmo.com/buy-numbers).
 
-To assign a number you already own, navigate to the *Numbers* tab and select the number to assign:
+#### 3.1. Buy a new Nexmo Number
 
-![Number assign](/assets/images/client-sdk/contact-center/numbers.png)
+If you already have a Nexmo number that you had bought and want to use, you don't have to buy a new number.
 
-#### 3.2. Assign a Nexmo Number
-
-To buy a new number for your application, navigate to the *Numbers* tab and select the country to search numbers in.
+To buy a new number for your application, navigate to the **Numbers** tab and select the country to search numbers in.
 
 ![Number search](/assets/images/client-sdk/contact-center/numbers-search.png)
 
-You can now buy the number and then assign it to the app.
+After you bought the number you can assign it to your application.
 
-![Number assign](/assets/images/client-sdk/contact-center/numbers-assign.png)
+#### 3.2. Assign a Nexmo Number
+
+To assign a number you already own, navigate to the **Numbers** tab and select the number to assign:
+
+![Number assign](/assets/images/client-sdk/contact-center/numbers.png).
 
 ### 4. Create Users
 
-A [user](_documentation/conversation/concepts/user) can log in to the application, in order to use the Conversation API and Nexmo Client functionality, such as create a conversation, join a conversation, and so on.
+A [user](_documentation/conversation/concepts/user) can log in to your application, in order to use the Nexmo Client and Conversation API functionality, such as create a conversation, join a conversation, and more.
 
 To create users:
 
-- If you are using the demo application, on the top menu select *Users* and then *New User*.
+- If you are using the demo application, on the top menu select **Users** and then **New User**.
 
 ![New User](/assets/images/client-sdk/contact-center/users-new.png)
 
@@ -105,7 +114,7 @@ For security reasons, your client should not hold your private key. Therefore, t
 
 Your backend should expose an endpoint that would allow the client to ask for a valid JWT per user. In a real life scenario, you would probably add some further authentication method such as a password. For this use case, sending your username will do.
 
-- If you are using the demo backend application, it exposes a simple endpoint for that case. Click "SDK Integration" on the top menu. Under "User Authorization" you will find the endpoint, the request and response bodies.
+- If you are using the demo backend application, it exposes a simple endpoint for that case. Click **SDK Integration** on the top menu. Under **User Authorization** you will find the exposed endpoint, the request and response bodies.
 
 ![SDK integration](/assets/images/client-sdk/contact-center/sdk-integration.png)
 
@@ -141,10 +150,10 @@ You are now ready to make and receive calls, and add other advanced voice functi
 
 ## Add Voice Functionality
 
-For each Nexmo Application you can define an `answer_url`. That is a [webhook](_documentation/concepts/guides/webhooks) which Nexmo make a request to as soon as your Nexmo number is being called to.
+For each Nexmo Application you can define an `answer_url`. That is a [webhook](_documentation/concepts/guides/webhooks) which Nexmo makes a request to as soon as your Nexmo number is being called to.
 The `answer_url` contains the actions that will execute throughout the call. It does that by defining those actions in a JSON it returns, which follows the [Nexmo Call Control Object (NCCO)](_documentation/voice/voice-api/ncco-reference).
 
-Updating the NCCO that returns from your `answer_url` changes the call functionality and allows you to add rich capabilities to your contact center application. To do this, navigate to the "App Settings" tab and click on "Edit NCCO":
+Updating the NCCO that returns from your `answer_url` changes the call functionality and allows you to add rich capabilities to your contact center application. To do this, navigate to the **App Settings** tab and click on **Edit NCCO**:
 
 [screeshot to be added]
 
