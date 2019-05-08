@@ -1,11 +1,11 @@
 ---
-title: Comply with prerequisites
-description: You should ensure you having the necessary prerequisites in place.
+title: Check prerequisites
+description: You should ensure you have the necessary prerequisites in place.
 ---
 
 # Comply with prerequisites
 
-You should ensure you having the necessary prerequisites in place:
+You should ensure you have the necessary prerequisites in place:
 
 1. [Create a Nexmo Account](https://dashboard.nexmo.com/sign-in)
 2. [Install Node JS](https://nodejs.org/en/download/) - required for using the Nexmo Command Line Interface (CLI).
