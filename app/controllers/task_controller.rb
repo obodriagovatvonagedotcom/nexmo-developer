@@ -16,6 +16,8 @@ class TaskController < ApplicationController
                                       code_language: @code_language,
                                       current_user: current_user,
                                     }).call(@task.content_for(@task_step))
+
+    @hide_card_wrapper = true
     render layout: 'documentation'
   end
 

@@ -43,11 +43,11 @@ class Task
       title: config['title'],
       description: config['description'],
       product: config['product'],
-      subtasks: load_subtasks(config['introduction'], config['tasks'], config['conclusion']),
+      subtasks: load_subtasks(config['introduction'], config['tasks'], config['conclusion'], current_step),
     })
   end
 
-  def self.load_subtasks(introduction, tasks, conclusion)
+  def self.load_subtasks(introduction, tasks, conclusion, current_step)
     tasks ||= []
 
     tasks = tasks.map do |t|
@@ -58,6 +58,7 @@ class Task
         'path' => t,
         'title' => subtask_config['title'],
         'description' => subtask_config['description'],
+        'is_active' => t == current_step
       }
     end
 
@@ -66,6 +67,7 @@ class Task
         'path' => 'introduction',
         'title' => introduction['title'],
         'description' => introduction['description'],
+        'is_active' => current_step == 'introduction'
       })
     end
 
@@ -74,6 +76,7 @@ class Task
         'path' => 'conclusion',
         'title' => conclusion['title'],
         'description' => conclusion['description'],
+        'is_active' => current_step == 'conclusion'
       })
     end
 
