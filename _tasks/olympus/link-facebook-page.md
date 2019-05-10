@@ -5,7 +5,7 @@ description: In this Task you see how to link your Facebook Page to your Nexmo a
 
 # Link your Facebook Page to your Nexmo account
 
-## 1. Generate a JWT
+## Generate a JWT
 
 You will need to generate a JWT to validate the linking of your Facebook Page to your Nexmo account. You can skip this step if you have already linked your Facebook Page to your Nexmo account.
 
@@ -25,7 +25,7 @@ echo $JWT
 
 Copy the JWT text to the clipboard. You will use it later to validate the linking of your Facebook Page to your Nexmo account.
 
-## 2. Link your Facebook Page to your Nexmo account
+## Link your Facebook Page to your Nexmo account
 
 To link your Facebook Page to your Nexmo account navigate to the following page:
 
