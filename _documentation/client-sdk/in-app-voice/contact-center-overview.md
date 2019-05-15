@@ -138,7 +138,7 @@ To get started you can choose between 2 options:
 
 - *Option 1:* 
     - Clone one of the sample apps:
-        - Javascript //TODO: add links
+        - Javascript: [React](https://github.com/nexmo-community/contact-center-react)
         - iOS: [Swift](https://github.com/nexmo-community/contact-center-swift) or [Objective-C](https://github.com/nexmo-community/contact-center-objective-c)
         - Android: Kotlin or Java //TODO: add links
     - Make sure you add your server URL and the mobile key as required
