@@ -35,6 +35,27 @@
         </div>
         <div class="Vlt-card__content">
           <h4><%= @task.title %></h4>
+          <small><%= @task.description %></small>
+          <br /><br />
+          <div class="Vlt-accordion">
+            <button class="Vlt-accordion__trigger <%= @task.prerequisite? ? 'Vlt-accordion__trigger_active' : '' %>"><span style="font-weight: bold;">Prerequisites</span></button>
+            <div class="Vlt-accordion__content <%= @task.prerequisite? ? 'Vlt-accordion__content_open' : '' %>">
+              <% @task.prerequisites.each_with_index do |t, i| %>
+            <div class="Vlt-grid">
+              <div class="Vlt-col Vlt-col--1of4">
+              <span class="Vlt-number <%= t['is_active'] ? 'Vlt-bg-blue': '' %>" style="margin:0"><%= i+1 %></span>
+                </div>
+              <div class="Vlt-col Vlt-col--3of4 Nxd-step">
+              <a title="<%= t['description'] %>" href="<%= "/task/#{@task.name}/#{t['path']}" %>"><%= t['title'] %></a>
+              </div>
+            </div>
+              <% end %>
+            </div>
+          </div>
+          <br />
+          <span style="font-weight: bold;">Steps</span>
+          <br />
+          <br />
             <% @task.subtasks.each_with_index do |t, i| %>
             <div class="Vlt-grid">
               <div class="Vlt-col Vlt-col--1of4">

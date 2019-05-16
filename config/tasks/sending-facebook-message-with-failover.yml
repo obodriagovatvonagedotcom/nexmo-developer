@@ -11,8 +11,10 @@ introduction:
 
     > **NOTE:** This task assumes you have already created a Facebook Profile and a Facebook Page.
 
-tasks:
+prerequisites:
 - olympus/prereqs
+
+tasks:
 - olympus/create-application
 - olympus/link-facebook-page
 - olympus/link-application-to-facebook
