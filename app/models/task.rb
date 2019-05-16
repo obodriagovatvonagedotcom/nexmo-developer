@@ -54,6 +54,8 @@ class Task
   end
 
   def self.load_prerequisites(prerequisites, current_step)
+    return [] unless prerequisites
+
     prerequisites.map do |t|
       t_path = "#{task_content_path}/#{t}.md"
       raise "Prerequisite not found: #{t}" unless File.exist? t_path

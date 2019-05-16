@@ -164,24 +164,28 @@ end
 def introduction_subtask
   { 'path' => 'introduction',
     'title' => 'Introduction Title',
+    'is_active' => true,
     'description' => 'This is an introduction' }
 end
 
 def application_subtask
   { 'path' => 'application/create-voice',
     'title' => 'Create a voice application',
+    'is_active' => false,
     'description' => 'Learn how to create a voice application' }
 end
 
 def outbound_call_subtask
   { 'path' => 'voice/make-outbound-call',
     'title' => 'Make an outbound call',
+    'is_active' => false,
     'description' => 'Simple outbound call example' }
 end
 
 def conclusion_subtask
   { 'path' => 'conclusion',
     'title' => 'Conclusion Title',
+    'is_active' => false,
     'description' => 'This is a conclusion' }
 end
 
@@ -205,6 +209,7 @@ def stub_task_config(path:, title:, description:, product:, tasks:, include_intr
     'title' => title,
     'description' => description,
     'product' => product,
+    'is_active' => false,
     'tasks' => tasks,
   }
 
@@ -212,6 +217,7 @@ def stub_task_config(path:, title:, description:, product:, tasks:, include_intr
     config['introduction'] = {
       'title' => 'Introduction Title',
       'description' => 'This is an introduction',
+      'is_active' => true,
       'content' => 'Start of a task',
     }
   end
@@ -220,6 +226,7 @@ def stub_task_config(path:, title:, description:, product:, tasks:, include_intr
     config['conclusion'] = {
       'title' => 'Conclusion Title',
       'description' => 'This is a conclusion',
+      'is_active' => false,
       'content' => 'End of a task',
     }
   end
