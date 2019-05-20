@@ -16,7 +16,7 @@ In these guides, you’ll learn how to build an application with contact center 
 
 Your contact center application has 2 agents: `Jane` and `Joe`, that use your app. The caller will use a phone, to call into the call center.
 
-- A client app, for your contact center agents. They can make and receive calls, and much more. You’ll use [Nexmo Client SDK](_documentation/client-sdk/in-app-voice/overview) to create that app.
+- A client app, for your contact center agents. They can make and receive calls, and much more. You’ll use [Nexmo Client SDK](/client-sdk/in-app-voice/overview) to create that app.
 
 - A server-side application. To use the SDK you must have a backend application. Some methods, like managing users can only be done through the backend. Other things (like creating conversations for example) can be done by both client and server side. You’ll do that with [Conversation API.](_documentation/conversation/overview)
 
