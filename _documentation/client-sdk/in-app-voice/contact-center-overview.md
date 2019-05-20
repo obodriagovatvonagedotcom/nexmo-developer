@@ -71,7 +71,7 @@ Once you have created a Nexmo Account you will be able to create multiple [Nexmo
   - and then you can create a new application by entering a name and clicking *Create*:
     ![Setup](/assets/images/client-sdk/contact-center/setup.png)
 
-- Otherwise, you can also use the [API directly](_documentation/concepts/guides/applications/curl#getting-started-with-applications)
+- Otherwise, you can also use the [API directly](/concepts/guides/applications/curl#getting-started-with-applications)
 
 ### 3. Connect a Nexmo Number
 
