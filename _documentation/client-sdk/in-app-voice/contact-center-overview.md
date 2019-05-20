@@ -22,7 +22,7 @@ Your contact center application has 2 agents: `Jane` and `Joe`, that use your ap
 
 - For more advanced voice functionality, you’ll utilize Nexmo [Voice API](_documentation/voice/voice-api/overview) on your backend side application.
 
-> **NOTE:** Under the hood, Nexmo Voice API uses Conversation API as well and allows you to use conversations for Voice capabilities in a smoother fashion. That means that all communication is done over a [Conversation](_documentation/conversation/conversation), that allows you to maintain the communication context over time, for any communication channel you will choose.
+> **NOTE:** Under the hood, Nexmo Voice API uses Conversation API as well and allows you to use conversations for Voice capabilities in a smoother fashion. That means that all communication is done over a [Conversation](/conversation/conversation), that allows you to maintain the communication context over time, for any communication channel you will choose.
 
 ## Before You Begin
 
