@@ -158,7 +158,7 @@ You are now ready to make and receive calls, and add other advanced voice functi
 ## Add Voice Functionality
 
 For each Nexmo Application, you can define an `answer_url`. That is a [webhook](/concepts/guides/webhooks) which Nexmo makes a request to as soon as your Nexmo number is being called to.
-The `answer_url` contains the actions that will execute throughout the call. It does that by defining those actions in a JSON it returns, which follows the [Nexmo Call Control Object (NCCO)](_documentation/voice/voice-api/ncco-reference).
+The `answer_url` contains the actions that will execute throughout the call. It does that by defining those actions in a JSON it returns, which follows the [Nexmo Call Control Object (NCCO)](/voice/voice-api/ncco-reference).
 
 Updating the NCCO that returns from your `answer_url` changes the call functionality and allows you to add rich capabilities to your contact center application. To do this, navigate to the **App Settings** tab and click on **Edit NCCO**:
 
