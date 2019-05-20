@@ -144,7 +144,7 @@ To get started you can choose between 2 options:
     - Make sure you add your server URL and the mobile key as required
 
 - *Option 2:* Integrate the SDK to your own client side application:
-    1. [Add the SDK to your existing app](_documentation/client-sdk/setup/add-sdk-to-your-app)
+    1. [Add the SDK to your existing app](/client-sdk/setup/add-sdk-to-your-app)
     2. [Add in-app voice functionality](_documentation/client-sdk/in-app-voice/guides/start-and-receive-calls)
     3. Create a simple API client to consume the JWT endpoint shown above.
 
