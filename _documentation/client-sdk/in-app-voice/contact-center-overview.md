@@ -63,7 +63,7 @@ Choose between 2 options:
 
 ### 2. Create Nexmo Application
 
-Once you have created a Nexmo Account you will be able to create multiple [Nexmo Applications](conversation/concepts/application). A Nexmo Application can contain a unique set of [Users](_documentation/conversation/concepts/user) and [Conversations](conversation/concepts/conversation).
+Once you have created a Nexmo Account you will be able to create multiple [Nexmo Applications](/conversation/concepts/application). A Nexmo Application can contain a unique set of [Users](/conversation/concepts/user) and [Conversations](/conversation/concepts/conversation).
 
 - If you deployed one of our demo backend applications on the previous step, you will need to:
   -  login in using your *api key* and *api secret*
