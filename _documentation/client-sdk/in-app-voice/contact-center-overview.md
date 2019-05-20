@@ -99,7 +99,7 @@ To assign a number you already own, navigate to the **Numbers** tab and select t
 
 ### 4. Create Users
 
-A [user](_documentation/conversation/concepts/user) can log in to your application, in order to use the Nexmo Client and Conversation API functionality, such as create a conversation, join a conversation, and more.
+A [user](/conversation/concepts/user) can log in to your application, in order to use the Nexmo Client and Conversation API functionality, such as create a conversation, join a conversation, and more.
 
 To create users:
 
