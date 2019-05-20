@@ -275,4 +275,4 @@ You have:
 - [Add push notification to your mobile app](/client-sdk/setup/set-up-push-notifications)
 - Explore [Client SDK](/client-sdk/overview)
 - Explore [Voice API](/conversation/overview)
-- Explore [Conversation API](_documentation/conversation/overview)
+- Explore [Conversation API](/conversation/overview)
