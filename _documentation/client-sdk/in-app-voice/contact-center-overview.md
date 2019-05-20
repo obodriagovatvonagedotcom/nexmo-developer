@@ -75,7 +75,7 @@ Once you have created a Nexmo Account you will be able to create multiple [Nexmo
 
 ### 3. Connect a Nexmo Number
 
-In order to make and receive calls, you should have a [Nexmo Number](_documentation/numbers/overview) conected to your Nexmo application.
+In order to make and receive calls, you should have a [Nexmo Number](/numbers/overview) connected to your Nexmo application.
 
 To set that up, you can either assign a number you already own or buy a new number.
 
