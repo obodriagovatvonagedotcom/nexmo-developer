@@ -273,6 +273,6 @@ You have:
 
 ### What's Next?
 - [Add push notification to your mobile app](/client-sdk/setup/set-up-push-notifications)
-- Explore [Client SDK](_documentation/client-sdk/overview)
+- Explore [Client SDK](/client-sdk/overview)
 - Explore [Voice API](_documentation/conversation/overview)
 - Explore [Conversation API](_documentation/conversation/overview)
