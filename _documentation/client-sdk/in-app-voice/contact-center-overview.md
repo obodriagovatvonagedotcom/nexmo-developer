@@ -125,7 +125,7 @@ Your backend should expose an endpoint that would allow the client to ask for a 
 
 ![SDK integration](/assets/images/client-sdk/contact-center/sdk-integration.png)
 
-- Otherwise, you can use [Nexmo Server Libraries](_documentation/conversation/concepts/jwt-acl#nexmo-client-libraries) or other method of your choice.
+- Otherwise, you can use [Nexmo Server Libraries](/conversation/concepts/jwt-acl#nexmo-client-libraries) or other method of your choice.
 
 You may update your JWT and adjust the user's permissions, the expiration date and more. Read more about JWT and ACL [in this topic](_documentation/conversation/concepts/jwt-acl).
 
