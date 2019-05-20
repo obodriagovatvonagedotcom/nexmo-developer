@@ -20,7 +20,7 @@ Your contact center application has 2 agents: `Jane` and `Joe`, that use your ap
 
 - A server-side application. To use the SDK you must have a backend application. Some methods, like managing users can only be done through the backend. Other things (like creating conversations for example) can be done by both client and server side. You’ll do that with [Conversation API.](/conversation/overview)
 
-- For more advanced voice functionality, you’ll utilize Nexmo [Voice API](_documentation/voice/voice-api/overview) on your backend side application.
+- For more advanced voice functionality, you’ll utilize Nexmo [Voice API](/voice/voice-api/overview) on your backend side application.
 
 > **NOTE:** Under the hood, Nexmo Voice API uses Conversation API as well and allows you to use conversations for Voice capabilities in a smoother fashion. That means that all communication is done over a [Conversation](/conversation/conversation), that allows you to maintain the communication context over time, for any communication channel you will choose.
 
