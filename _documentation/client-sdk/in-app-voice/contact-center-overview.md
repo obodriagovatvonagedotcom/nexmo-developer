@@ -79,7 +79,7 @@ In order to make and receive calls, you should have a [Nexmo Number](/numbers/ov
 
 To set that up, you can either assign a number you already own or buy a new number.
 
-The demo backend application will give you a basic features to start with. For more details and number management check out the [Numbers API](_documentation/numbers/overview) or visit the [dashboard](https://dashboard.nexmo.com/buy-numbers).
+The demo backend application will give you basic features to start with. For more details and number management, check out the [Numbers API](/numbers/overview) or visit the [dashboard](https://dashboard.nexmo.com/buy-numbers).
 
 #### 3.1. Buy a new Nexmo Number
 
