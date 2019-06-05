@@ -97,10 +97,12 @@ Rails.application.routes.draw do
     get '/product-lifecycle/*document', to: 'markdown#show'
   end
 
+  scope '/:namespace', constraints: { namespace: 'contribute' }, defaults: { namespace: '' } do
+    get '/*document(/:code_language)', to: 'markdown#show', constraints: DocumentationConstraint.documentation
+  end
+
   scope '/:locale' do
-    scope '(:namespace)', namespace: /contribute/, defaults: { namespace: '' } do
-      get '/*document(/:code_language)', to: 'markdown#show', constraints: DocumentationConstraint.documentation
-    end
+    get '/*document(/:code_language)', to: 'markdown#show', constraints: DocumentationConstraint.documentation
   end
 
   get '(/:locale)/:product/*document(/:code_language)', to: 'markdown#show', constraints: DocumentationConstraint.documentation
