@@ -9,11 +9,9 @@ class Task
     end
 
     path = "#{self.class.task_content_path}/#{step_name}.md"
-    raise "Invalid step: #{step_name}" unless File.exist? path
-    content = File.read(path)
 
-    # Strip off leading YAML
-    content.gsub(/\A(---.+?---)/mo, '').strip
+    raise "Invalid step: #{step_name}" unless File.exist? path
+    File.read(path)
   end
 
   def first_step
@@ -49,7 +47,7 @@ class Task
       description: config['description'],
       product: config['product'],
       prerequisites: load_prerequisites(config['prerequisites'], current_step),
-      subtasks: load_subtasks(config['introduction'], config['tasks'], config['conclusion'], current_step),
+      subtasks: load_subtasks(config['introduction'], config['prerequisites'], config['tasks'], config['conclusion'], current_step),
     })
   end
 
@@ -59,17 +57,19 @@ class Task
     prerequisites.map do |t|
       t_path = "#{task_content_path}/#{t}.md"
       raise "Prerequisite not found: #{t}" unless File.exist? t_path
-      prereq = YAML.safe_load(File.read(t_path))
+      content = File.read(t_path)
+      prereq = YAML.safe_load(content)
       {
         'path' => t,
         'title' => prereq['title'],
         'description' => prereq['description'],
         'is_active' => t == current_step,
+        'content' => content,
       }
     end
   end
 
-  def self.load_subtasks(introduction, tasks, conclusion, current_step)
+  def self.load_subtasks(introduction, prerequisites, tasks, conclusion, current_step)
     tasks ||= []
 
     tasks = tasks.map do |t|
@@ -82,6 +82,15 @@ class Task
         'description' => subtask_config['description'],
         'is_active' => t == current_step,
       }
+    end
+
+    if prerequisites
+      tasks.unshift({
+        'path' => 'prerequisites',
+        'title' => 'Prerequisites',
+        'description' => 'Everything you need to complete this task',
+        'is_active' => current_step == 'prerequisites',
+      })
     end
 
     if introduction

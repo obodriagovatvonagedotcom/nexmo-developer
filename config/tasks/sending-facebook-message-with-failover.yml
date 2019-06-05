@@ -12,7 +12,13 @@ introduction:
     > **NOTE:** This task assumes you have already created a Facebook Profile and a Facebook Page.
 
 prerequisites:
-- olympus/prereqs
+- create-nexmo-account
+- install-nodejs
+- install-nexmo-cli-beta
+- install-node-sdk-beta
+- olympus/configure-webhooks
+- olympus/write-webhook-server
+- olympus/test-webhook-server
 
 tasks:
 - olympus/create-application

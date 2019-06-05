@@ -1,0 +1,11 @@
+<h1>Configure your prerequisites</h1>
+<% @task.prerequisites.map do |p| %>
+  <h2><%= p['title'] %></h2>
+  <%=
+    @content = MarkdownPipeline.new({
+                                        code_language: @code_language,
+                                        current_user: current_user,
+                                    }).call(p['content']).html_safe
+    %>
+  <hr />
+<% end %>

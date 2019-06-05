@@ -145,10 +145,14 @@ RSpec.describe Task, type: :model do
         create_example_config(false, false)
         task = described_class.load('example-task', 'introduction')
         expect(task.content_for('application/create-voice')).to eq(<<~HEREDOC
+          ---
+          title: Create a voice application
+          description: Learn how to create a voice application
+          ---
           # Create a voice application
           Creating a voice application is very important. Please do it
         HEREDOC
-                                                                   .strip)
+                                                                   .strip + "\n")
       end
 
       it 'raises if it does not exist' do
