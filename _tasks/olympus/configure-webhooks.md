@@ -1,7 +1,6 @@
 ---
-title: Configure your webhooks 
-description: Configure your webhooks to receive messages from you chosen channel
+title: Learn how to configure your webhooks 
+description: Learn how to configure your webhooks to receive messages from your chosen channel
 ---
 
-@TODO
-
+[Learn how to configure webhooks](/messages/code-snippets/configure-webhooks)
