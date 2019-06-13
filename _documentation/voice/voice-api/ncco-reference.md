@@ -148,7 +148,7 @@ Option | Description | Required
 
 ### Endpoint Types and Values
 
-#### Phone - phone numbers in e.164 format
+#### Phone - phone numbers in E.164 format
 
 Value | Description
 -- | --
@@ -187,7 +187,7 @@ Value | Description
 
 The `talk` action sends synthesized speech to a Conversation.
 
-The text provided in the talk action can either be plain, or formatted using [SSML](/voice/voice-api/guides/customizing-tts). SSML tags provide further instructions to the text-to-speech synthesiser which allow you to set pitch, pronunciation and to combine together text in multiple languages. SSML tags are XML-based and sent inline in the JSON string.
+The text provided in the talk action can either be plain, or formatted using [SSML](/voice/voice-api/guides/customizing-tts). SSML tags provide further instructions to the text-to-speech synthesizer which allow you to set pitch, pronunciation and to combine together text in multiple languages. SSML tags are XML-based and sent inline in the JSON string.
 
 By default, the talk action is synchronous. However, if you set *bargeIn* to *true* you must set an *input* action later in the NCCO stack.
 The following NCCO examples shows how to send a synthesized speech message to a Conversation or Call:
@@ -221,7 +221,7 @@ You can use the following options to control a *stream* action:
 
 Option | Description | Required
 -- | -- | --
-`streamUrl` | An array containing a single URL to an mp3 or wav (16-bit) audio file to stream to the Call or Conversation. | Yes
+`streamURL` | An array containing a single URL to an mp3 or wav (16-bit) audio file to stream to the Call or Conversation. | Yes
 `level` |  Set the audio level of the stream in the range -1 >=level<=1 with a precision of 0.1. The default value is *0*. | No
 `bargeIn` | Set to *true* so this action is terminated when the user presses a button on the keypad. Use this feature to enable users to choose an option without having to listen to the whole message in your [Interactive Voice Response (IVR](/voice/guides/interactive-voice-response) ). If you set `bargeIn` to `true` on one more Stream actions then the next non-stream action in the NCCO stack **must** be an `input` action. The default value is `false`.<br /><br />Once `bargeIn` is set to `true` it will stay `true` (even if `bargeIn: false` is set in a following action) until an `input` action is encountered | No
 `loop` | The number of times `audio` is repeated before the Call is closed. The default value is `1`. Set to `0` to loop infinitely. | No
@@ -247,7 +247,7 @@ WAV:
 
 ## Input
 
-You can use the `input` action to collect digits input by the person you are calling. This action is synchronous, Nexmo processes the input and forwards it in the [parameters](#input-return-parameters) sent to the `eventURL` webhook endpoint you configure in your request. Your webhook endpoint should return another NCCO that replaces the existing NCCO and controls the Call based on the user input. You could use this functionality to create an Interactive Voice Response (IVR). For example, if your user presses *4*, you return a [connect](#connect) NCCO that forwards the call to your sales department.
+You can use the `input` action to collect digits input by the person you are calling. This action is synchronous, Nexmo processes the input and forwards it in the [parameters](#input-return-parameters) sent to the `eventUrl` webhook endpoint you configure in your request. Your webhook endpoint should return another NCCO that replaces the existing NCCO and controls the Call based on the user input. You could use this functionality to create an Interactive Voice Response (IVR). For example, if your user presses *4*, you return a [connect](#connect) NCCO that forwards the call to your sales department.
 
 The following NCCO example shows how to configure an IVR endpoint:
 

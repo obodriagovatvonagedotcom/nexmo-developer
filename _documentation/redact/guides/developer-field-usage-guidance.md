@@ -37,7 +37,7 @@ Note that the NCCO provided by the customer server to the Voice API may contain 
 * `endpoint.uri`
 * `from`
 * `text` (note that the NCCO is logged for diagnostic purposes, and retained for approximately 30 days)
-* `streamUrl`
+* `streamURL`
 
 ## Application API
 
