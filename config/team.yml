@@ -79,6 +79,10 @@ current:
     email: 'fabian.rodriguez@vonage.com'
     twitter: 'fabianrbz'
     role: 'Nexmo Developer Tech Lead'
+ - name: 'Lauren Lee'
+    email: 'lauren.lee@vonage.com'
+    twitter: 'lolocoding'
+    role: 'Developer Educator'
 alumni:
   - name: 'Manik Sachdeva'
     email: 'manik.sachdeva@vonage.com'
