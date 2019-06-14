@@ -1,6 +1,6 @@
 ---
 title: Install Node.js
-description: Install the Nexmo Node Beta to get the latest functionality
+description: Install node.js as a prerequisite to installing the Nexmo CLI
 ---
 
-[Install Node JS](https://nodejs.org/en/download/) - required for using the Nexmo Command Line Interface (CLI).
+If you want to carry out tasks such as creating applications, purchasing Nexmo numbers and so on, you will need to install the Nexmo CLI. As the Nexmo CLI requires `node.js` you will need to [install `node.js`](https://nodejs.org/en/download/) first.
