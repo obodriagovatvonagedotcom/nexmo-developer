@@ -71,7 +71,13 @@ Create a User who will log in to Nexmo Client and participate in the SDK functio
 Replace `MY_USER_NAME` with your desired user name, and run the following command on a terminal:
 
 ```bash
-nexmo user:create name="MY_USER_NAME"
+nexmo user:create name=MY_USER_NAME
+```
+
+For example:
+
+```bash
+nexmo user:create name=Jane
 ```
 
 The output with the user ID, is similar to:
