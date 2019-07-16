@@ -79,6 +79,10 @@ navigation_overrides:
   account:
     svg: 'user'
     svgColor: 'blue'
+    sub-accounts:
+      svg: 'user'
+      svgColor: 'blue'
+      label: 'Beta'
   redact:
     label: 'Dev Preview'
     svg: 'lock'
@@ -116,9 +120,6 @@ navigation_overrides:
   vonage-business-cloud:
     svg: 'telephone'
     svgColor: 'green'
-  sub-accounts:
-    svg: 'user'
-    svgColor: 'blue'
   contribute:
     administration:
       navigation_weight: 9999
