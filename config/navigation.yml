@@ -79,7 +79,7 @@ navigation_overrides:
   account:
     svg: 'user'
     svgColor: 'blue'
-    sub-accounts:
+    subaccounts:
       svg: 'user'
       svgColor: 'blue'
       label: 'Beta'
