@@ -22,13 +22,14 @@ Use case examples:
 * Invoice reconciliation - compare your usage data with the invoice you have received
 * Monitoring & analytics - Add CDR data to your business intelligence or analytics system to correlate it with other events
 
-> The Reports API Beta is available free of charge to all customers until the 1st of March 2020. Once the beta period is over, a free version of the API will be available (max 20 calls per month, per API key). Unlimited API calls will still be available on the Enterprise plan
+> The Reports API Beta is available free of charge for all customers until the 1st of March 2020. Once this period is over, charges will be applied if the number of requests exceeds the Free Usage Tier. Please use the following form to request the API pricing: https://info.nexmo.com/ReportsAPI.html
 
 ## Features
 
 - Variety of filters - query exactly the data you need
 - Compressed CSV - Reports are formatted as CSV and compressed for faster downloads
 - Privacy - Report files are automatically deleted after 72 hours
+- Full coverage - Reports can fetch up to 13 months of data (maximum retention period for CDRs).
 - Callbacks - An HTTP(S) POST callback can be generated to notify when report is completed
 
 ## Performance considerations
@@ -40,7 +41,7 @@ Be advised, even though the Reports API Beta is quite fast and can deal with eno
 * SMS API
 * Messages API
 * Voice API
-* IP Voice
+* Conversations API
 * Verify API
 * Number Insight
 
