@@ -1,40 +1,29 @@
 ---
 title: Overview
+meta_title: The Reports API
 ---
 
-## Contents
 
-In this document you can learn about:
+# Reports
+The Reports API enables you to download call data records (CDRs). You can filter your CDRs based on attributes such  as origin and destination phone numbers, status, time period and more. ([See the list of supported parameters](/api/reports#create-report)). You can include the message body/text and download reports for any of your subaccounts.
 
-* [Reports API Overview](#overview)
-* [Features](#features)
-* [Performance considerations when implementing the Reports API](#performance-considerations)
-* [Products supported by Reports API](#products-supported)
-* [Tutorial](#tutorial)
-* [API Reference](#reference)
+You can use the Reports API in a wide variety of accounting tasks, including:
 
-# Overview
-Reports API allows to download call data records (CDRs). Records can be queried using a variety of parameters such as origin and destination phone numbers, status, time period, etc. (see report filters for more information). It is also possible to include the message body/text and to download reports for any of your subaccounts.
+* Customer billing - Download your transactions and use the included price data to determine what to bill your customers
+* Invoice reconciliation - Compare your usage data with the invoice you have received
+* Monitoring and analytics - Add CDR data to your business intelligence or analytics system to correlate it with other events
 
-Use case examples:
-
-* Customer billing - download your transactions and use the included price data to determine what to bill your customers
-* Invoice reconciliation - compare your usage data with the invoice you have received
-* Monitoring & analytics - Add CDR data to your business intelligence or analytics system to correlate it with other events
-
-> The Reports API Beta is available free of charge for all customers until the 1st of March 2020. Once this period is over, charges will be applied if the number of requests exceeds the Free Usage Tier. Please use the following form to request the API pricing: https://info.nexmo.com/ReportsAPI.html
+> The Reports API Beta is available free of charge for all customers until the 1st of March 2020. After that date, charges will be applied if the number of requests exceeds the Free Usage Tier. Please use the following form to enquire about pricing: https://info.nexmo.com/ReportsAPI.html
 
 ## Features
 
-- Variety of filters - query exactly the data you need
-- Compressed CSV - Reports are formatted as CSV and compressed for faster downloads
+- Searchability - Query your CDRs using a wide range of filters to extract the data you need
+- Compressed output - Reports are formatted as CSV and compressed for faster downloads
 - Privacy - Report files are automatically deleted after 72 hours
-- Full coverage - Reports can fetch up to 13 months of data (maximum retention period for CDRs).
+- Full coverage - Reports can fetch up to 13 months of data (which is the maximum retention period for CDRs).
 - Callbacks - An HTTP(S) POST callback can be generated to notify when report is completed
 
-## Performance considerations
-
-Be advised, even though the Reports API Beta is quite fast and can deal with enormous amounts of data, it may seem to be slow when trying to download data for realtime analytics. Usage of filters can speed up processing considerably.
+> **A note on performance**: Even though the Reports API is fast and can deal with enormous amounts of data, it may becomer slower when trying to download data for realtime analytics. Using sensible filters can speed up processing considerably.
 
 ## Supported products
 
@@ -45,9 +34,10 @@ Be advised, even though the Reports API Beta is quite fast and can deal with eno
 * Verify API
 * Number Insight
 
+## Getting Started
+
+Learn how to [create and retrieve a report](/reports/tutorials/create-and-retrieve-a-report/)
+
 ## API Reference
 
 * [Reports API Reference](/api/reports)
-
-## Tutorial
-* [How to generate a report via Postman for non-technical users](link to be added when available)

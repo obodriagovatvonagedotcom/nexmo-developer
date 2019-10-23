@@ -4,9 +4,9 @@ title: Create a report
 
 # Create a report
 
-To create a report, you need to send a `POST` request to `https://api.nexmo.com/v2/reports`. The request that you send to the endpoint will determine what kind of report you receive.
+To create a report, you send a `POST` request to `https://api.nexmo.com/v2/reports`. The parameters that you include in the request will determine which records are returned.
 
-For example, to view all SMS messages sent from your Nexmo Account in June 2019, you'd use the following request:
+For example, use the following request to view all SMS messages sent from your Nexmo Account in June 2019:
 
 ```bash
 curl -X POST https://api.nexmo.com/v2/reports/ \
@@ -15,6 +15,9 @@ curl -X POST https://api.nexmo.com/v2/reports/ \
   -d '{"account_id": "$API_KEY","product": "SMS","direction": "outbound","start_date": "2019-06-01T00:00:00+0000","end_date": "2019-07-01T00:00:00+0000"}'
 ```
 
-> When generating reports with a date range, `start_date` is inclusive, but `end_date` is exclusive. This means that in the above example we would not match any SMS messages sent at 00:00:00
+The response contains a `request_id`. Make a note of this as you will need it to [check the report status](/reports/tutorials/create-and-retrieve-a-report/reports/check-report-status).
 
-For a full list of available reports, see the [reports API reference](/api/reports)
+> **Note**: When you filter using a date range, `start_date` is inclusive, but `end_date` is exclusive. This means that the above example would not include any SMS messages sent at `00:00:00`.
+
+For a full list of the filter parameters available, see the [Reports API reference](/api/reports).
+
