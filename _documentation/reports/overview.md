@@ -22,7 +22,7 @@ Use case examples:
 * Invoice reconciliation - compare your usage data with the invoice you have received
 * Monitoring & analytics - Add CDR data to your business intelligence or analytics system to correlate it with other events
 
-> The Reports API Beta is available free of charge for all customers until the 1st of March 2020. Once this period is over, charges will be applied if the number of requests exceeds the Free Usage Tier. Please use the following form to request the API pricing: [https://info.nexmo.com/ReportsAPI.html](https://info.nexmo.com/ReportsAPI.html)
+> The Reports API Beta is available free of charge for all customers until the 1st of March 2020. Once this period is over, charges will be applied if the number of requests exceeds the Free Usage Tier. Please use [this form](https://info.nexmo.com/ReportsAPI.html) to request the API pricing.
 
 ## Features
 
