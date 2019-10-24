@@ -23,7 +23,7 @@ You can use the Reports API in a wide variety of use cases, including:
 - Full coverage - Reports can fetch up to 13 months of data (which is the maximum retention period for CDRs).
 - Callbacks - An HTTP(S) POST callback can be generated to notify when report is completed
 
-> **A note on performance**: Even though the Reports API is fast and can deal with enormous amounts of data, it may becomer slower when trying to download data for realtime analytics. Using sensible filters can speed up processing considerably.
+> **A note on performance**: Even though the Reports API is fast and can deal with enormous amounts of data, it may become slower when trying to download data for realtime analytics. Using sensible filters can speed up processing considerably.
 
 ## Supported products
 
