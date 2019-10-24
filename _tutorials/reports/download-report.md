@@ -8,10 +8,10 @@ Once the report has been generated, you can download the results using the Media
 
 
 ```bash
-curl -u $API_KEY:$API_SECRET -o ./report.zip https://api.nexmo.com/v3/media/<id>
+curl -u $API_KEY:$API_SECRET -o ./report.zip https://api.nexmo.com/v3/media/REPORT_ID
 ```
 
-The ID you need to download the report is returned in the `file_id` field of the report status response. Alternatively, you can fetch the file using the entire URL in the `url` field.
+Replace `FILE_ID` with the value of the `file_id` field in the [report status response](/reports/tutorials/create-and-retrieve-a-report/reports/check-report-status). Alternatively, you can use the complete URL in the `url` field of the status response.
 
-Running the above command will download the report in to the current folder as a file named `report.zip`. Unzip this to see the results of your report
+Running the above command will download the report in to the current folder as a file named `report.zip`. Unzip this compressed file to see your report.
 

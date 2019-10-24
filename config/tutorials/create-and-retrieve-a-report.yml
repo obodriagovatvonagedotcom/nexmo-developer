@@ -6,14 +6,17 @@ products:
 
 introduction:
   title: Introduction
-  description: Learn about the Nexmo Reports API
+  description: Learn how to use the Reports API
   content: |
     # Introduction
 
-    The reports API is an asynchronous API. To generate a report, you should submit a report generation request and wait for it to be processed. API checks whether the format of the request is correct, then puts it in the processing queue, and responds with the link to check the current status of the report. Reports API can also send a callback to notify when the report has been generated.
+    This tutorial shows you how to create and retrieve report using the Reports API.
 
-    N.B. Be advised, even though the Reports API Beta is quite fast and can deal with enormous amounts of data, it may seem to be slow when trying to download data for realtime analytics. Usage of filters can speed up processing considerably.
+    The Reports API is an asynchronous API. To generate a report, you submit a report generation request and wait for it to be processed.
 
+    The Reports API checks whether the format of the request is correct, then places it in the processing queue. It responds with a link that enables you to check the current status of the report. The Reports API can also send a callback to notify your application when the report has been generated.
+
+    > **A note on performance**: Even though the Reports API is fast and can deal with enormous amounts of data, it may becomer slower when trying to download data for realtime analytics. Using sensible filters can speed up processing considerably.
 tasks:
   - reports/create-report
   - reports/check-report-status
