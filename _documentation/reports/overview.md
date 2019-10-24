@@ -7,7 +7,7 @@ meta_title: The Reports API
 # Reports
 The Reports API enables you to download call data records (CDRs). You can filter your CDRs based on attributes such  as origin and destination phone numbers, status, time period and more. ([See the list of supported parameters](/api/reports#create-report)). You can include the message body/text and download reports for any of your subaccounts.
 
-You can use the Reports API in a wide variety of use case, including:
+You can use the Reports API in a wide variety of use cases, including:
 
 * Customer billing - Download your transactions and use the included price data to determine what to bill your customers.
 * Invoice reconciliation - Compare your usage data with the invoice you have received.
