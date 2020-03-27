@@ -5,7 +5,7 @@ meta_title: Redact your data to stay GDPR compliant
 
 # Redact your data
 
-To facilitate our customers' privacy compliance efforts, Nexmo provide an API that allows you to manage personal data within the Nexmo platform. The Redact API allows you to redact information on demand, providing a solution for your own compliance needs.
+Nexmo provides an Auto-redact service and a Redact API that allow you to redact sensitibve/personal information either automatically or on demand, providing a solution for your own compliance and privacy needs.
 
 ### Right to erasure requests
 
@@ -23,21 +23,55 @@ In this document you can learn about:
 
 ## Concepts
 
-There are two ways that you can redact personal information from the Nexmo platform via tools provided by us, the Redact API and the general product APIs. Each of these options has a different use case and interaction model.
+There are three ways that you can redact personal information from the Nexmo platform:
+* Auto-redact service
+* Redact API
+* General product APIs
+
+## Stored data and redaction
+When you use Nexmo communication APIs, we create server logs and transactional records of the activity, which we call `CDRs` (short for `call detail record`, a telecommunications industry term). Server logs are retained for ~15 days (at most one month) but the CDRs are stored for 13 months. Both server logs and CDRs can be viewed by our support staff for various purposes, including testing and debugging, diagnosing user issues, and reconciling CDRs against customer's transaction records.
+
+The Auto-redact service and the Redact API can be used to remove Personal Identifiable Information (PII) stored in the Nexmo platform. PII held in the platform generally includes the receiver phone number for outbound messages/calls and sender phone number for inbound messages/calls. For messages, PII also icludes the message content. In terms of PII, server logs and CDRs are identical, i.e. they contain the same PII.
+
+Upon redaction, the real PII content in the redacted fields is overwritten with the string "REDACTED". Redaction of the receiver/sender phone number is subject to applicable data retention regulations, which are country-specific.
+
+Customers can view the redacted CDRs using either the [Reports API](https://developer.nexmo.com/reports/overview) or Customer Dashboard.
+
+### Auto-redact service
+Nexmo provides the Auto-redact service that automatically redacts PII from the Nexmo systems without any actions from your side. You can define whether you want redaction to be done immediately (once the message/call has been processed) or with a delay of several days. Supported values are 15 and 30 days. The scope of redaction and the configurable delay depends on which of the Nexmo communication APIs you are using. The detailed description is provided in the following paragraphs.
+
+Please find a complete list of relevant pricing for the auto-redact service here [here](http://go.nexmo.com/uBP000XZuh0l0H03qg7H3334).
+
+To request enablement of the Auto-redact service for your account, please visit [this page](https://info.nexmo.com/AutoRedact.html). 
 
 ### Redact API
+The Redact API provides Nexmo customers with an endpoint to programmatically request the redaction of CDRs (retained for 13 months) held in the Nexmo platform. Redact API does not have the capability to redact the server logs (retained for ~15 days). 
 
-When you use Nexmo communication APIs, we create a transaction record of the activity, which we call a `CDR` (short for `call detail record`, a telecommunications industry term). This can be viewed by our customers and support staff for various purposes, including testing and debugging, diagnosing user issues, and reconciling the CDR against a customer transaction record.
+To use the Redact API, you have to provide transaction (message/call) IDs returned in the responses to the API requests sent by you to the Nexmo communication APIs. For each ID, you need to make a request to the [Nexmo Redact API](/api/redact)
 
-The Redact API can be used to remove personal data from a CDR stored in the Nexmo platform. Personal data held in the platform generally means a person's phone number, and for messages, the body of the message itself.
+It is not possible to make the redaction API request immediately after receiving the transaction ID because it takes time (up to several minutes) for the CDRs to propogate to the long-term storage that Redact API redacts from. Thus, you either have to save in your database the returned transaction (CDR) IDs for later reference or use the Reports API to retrieve the CDRs along with their IDs for your account.
 
-To use the Redact API:
-
-1. Make a request to a Nexmo API. Save the ID returned in the response in your database for later reference
-2. When you receive a right to erasure request, fetch all IDs associated with that user from your database
-3. For each ID, make a request to the [Nexmo Redact API](/api/redact)
+The scope of redaction of the Redact API depends on what Nexmo communication APIs you were using. The detailed description is provided below.
 
 To request access to the Nexmo Redact API, please visit [this page](https://info.nexmo.com/RedactAPI.html)
+
+### Auto-redact vs Redact API
+
+| Features | Auto-redact | Redact API |
+| --------------- | --------------- | --------------- |
+| Usage | Is automatic. Does not require any customer intervention | For each record that you want to redact, you need a record  ID, and you need to make a request to the [Nexmo Redact API](/api/redact) |
+| Provisioning | Required | Required |
+| Price | Paid | Free |
+| Redaction scope | server logs and CDRs | CDRs only |
+
+*Detailed comparison of redaction scope per API*:
+| API  | PII | Auto-redact | Redact API |
+| --------------- | --------------- | --------------- | --------------- |
+| SMS API | PII includes the message content and the receiver phone number for outbound messages and sender phone number for inbound messages.<br> The SMS API uses a data pipeline software to transport CDRs to various databases. The data pipeline keeps CDRs along with receiver/sender phone number for 7 days. Thus, besides server logs and the long-term storage of CDRs, PII is also stored in the data pipeline logs | Auto-redact redacts server logs, CDRs, and the data pipeline logs. The scope of auto-redaction is configurable and can include the following fields:<br><ul><li>message content only</li><li>phone number redaction only</li><li>phone number encryption only</li><li>message content together with the phone number redaction or encryption</li></ul>When message content redaction is configured, message content is not written at all, not even to the server logs.<br> When number redaction is configured, each phone number gets encrypted by the SMS API before it gets written to server logs and data pipeline logs. The moment CDRs get propagated to the long-term storage of CDRs, the encrypted number field gets automatically redacted.<br> Neither Support nor any other personel have access to decryption keys | Redact API redacts only the long-term storage of CDRs. The scope of redaction is not configurable and includes message content together with the phone number |
+
+
+
+
 
 ### Product API
 
