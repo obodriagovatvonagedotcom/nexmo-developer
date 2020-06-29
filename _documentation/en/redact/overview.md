@@ -5,7 +5,8 @@ description: To facilitate our customers' privacy compliance efforts, Vonage pro
 ---
 
 # Redact your data
-Vonage provides two solutions to cover your compliance and privacy needs. The Auto-redact service and the Redact API allow you to redact sensitive/personal information either automatically or on demand from our platform.
+
+Vonage provides two solutions to cover your compliance and privacy needs. The Auto-redact service and the Redact API allow you to redact sensitive or personal information either automatically or on demand from our platform.
 
 ## Contents
 
@@ -22,7 +23,6 @@ Vonage provides two solutions to cover your compliance and privacy needs. The Au
    * [Conversations API](#conversations-api)
 * [Right to erasure requests](#right-to-erasure-requests)
 * [Technical Support Impact](#technical-support-impact)
-
 
 ## Concepts
 
@@ -138,7 +138,6 @@ Note that when a Conversation resource is deleted, it will no longer be availabl
 Under GDPR (and other privacy laws and regulations), individuals have the right to have personal data erased. Your users may ask you to remove any personal data being held about them. This could typically happen when someone terminates their relationship with a vendor, for example, the user of a dating app no longer needs the service, and asks the dating app vendor to delete their account and all the information it holds about them.
 
 If your user sends you a request to have personal data erased, you can use the Redact API to remove this individual's phone number from all communication records (known as "CDRs") in our system.
-
 
 ## Subject Access Requests
 
