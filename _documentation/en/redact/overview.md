@@ -61,7 +61,7 @@ The Redact API provides Vonage customers with an endpoint to programmatically re
 To use the Redact API, you have to provide transaction (message or call) IDs returned in the responses to the API requests sent by you to the Vonage communication APIs. For each ID, you need to make a request to the [Redact API](/api/redact).
 
 It is not possible to make the redaction API request immediately after receiving the transaction ID because it takes time (up to several minutes) for the CDRs to propagate to the long-term storage that Redact API redacts from. Thus, you either have to save the returned transaction (CDR) IDs in your database for later reference or use the Reports API to retrieve the CDRs along with their IDs for your account.
- HEAD
+
 The scope of redaction of the Redact API depends on what Vonage communication APIs you were using. The detailed description is provided below.
 
 To request access to the Redact API, please visit [this page](https://info.nexmo.com/RedactAPI.html).
@@ -74,6 +74,8 @@ To learn more about the Redact API please refer to the [Redact API Reference](/a
 | --------------- | --------------- | --------------- | --------------- |
 | Usage | For each record that you want to redact, you need to know a record  ID and you need to make a request to the [Redact API](/api/redact). | Automatic. Does not require any customer intervention. | Automatic. Does not require any customer intervention. |
 | Redaction scope | Only CDRs | Only CDRs | Server logs and CDRs |
+| Redaction options | Fixed | Configurable (except number encryption) | Configurable |
+| Invocation delay | can be successfully invoked only after CDR gets propagated to the long-term storage | 15, 30, 60, and 90 days | Immediate |
 | Provisioning | Required | Required | Required |
 | Price | Free | Paid | Paid |
 
